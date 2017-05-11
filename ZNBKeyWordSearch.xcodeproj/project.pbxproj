@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04205C031EC433E9006AE5AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C021EC433E9006AE5AE /* main.m */; };
+		04205C061EC433E9006AE5AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C051EC433E9006AE5AE /* AppDelegate.m */; };
+		04205C091EC433E9006AE5AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C081EC433E9006AE5AE /* ViewController.m */; };
+		04205C0C1EC433E9006AE5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C0A1EC433E9006AE5AE /* Main.storyboard */; };
+		04205C0E1EC433E9006AE5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04205C0D1EC433E9006AE5AE /* Assets.xcassets */; };
+		04205C111EC433E9006AE5AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C0F1EC433E9006AE5AE /* LaunchScreen.storyboard */; };
+		04205C271EC43432006AE5AE /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C1B1EC43432006AE5AE /* ChineseToPinyinResource.m */; };
+		04205C281EC43432006AE5AE /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C1D1EC43432006AE5AE /* HanyuPinyinOutputFormat.m */; };
+		04205C291EC43432006AE5AE /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C1F1EC43432006AE5AE /* NSString+PinYin4Cocoa.m */; };
+		04205C2A1EC43432006AE5AE /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C221EC43432006AE5AE /* PinyinFormatter.m */; };
+		04205C2B1EC43432006AE5AE /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C241EC43432006AE5AE /* PinyinHelper.m */; };
+		04205C2C1EC43432006AE5AE /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04205C261EC43432006AE5AE /* unicode_to_hanyu_pinyin.txt */; };
+		04205C2F1EC4455D006AE5AE /* ZNBAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C2E1EC4455D006AE5AE /* ZNBAttributedString.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04205BFE1EC433E8006AE5AE /* ZNBKeyWordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNBKeyWordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04205C021EC433E9006AE5AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04205C041EC433E9006AE5AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04205C051EC433E9006AE5AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04205C071EC433E9006AE5AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04205C081EC433E9006AE5AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04205C0B1EC433E9006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04205C0D1EC433E9006AE5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04205C101EC433E9006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04205C121EC433E9006AE5AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04205C1A1EC43432006AE5AE /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		04205C1B1EC43432006AE5AE /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		04205C1C1EC43432006AE5AE /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		04205C1D1EC43432006AE5AE /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		04205C1E1EC43432006AE5AE /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		04205C1F1EC43432006AE5AE /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		04205C201EC43432006AE5AE /* PinYin4Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+		04205C211EC43432006AE5AE /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		04205C221EC43432006AE5AE /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		04205C231EC43432006AE5AE /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		04205C241EC43432006AE5AE /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		04205C261EC43432006AE5AE /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		04205C2D1EC4455D006AE5AE /* ZNBAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAttributedString.h; sourceTree = "<group>"; };
+		04205C2E1EC4455D006AE5AE /* ZNBAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAttributedString.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04205BFB1EC433E8006AE5AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04205BF51EC433E8006AE5AE = {
+			isa = PBXGroup;
+			children = (
+				04205C001EC433E9006AE5AE /* ZNBKeyWordSearch */,
+				04205BFF1EC433E9006AE5AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04205BFF1EC433E9006AE5AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04205BFE1EC433E8006AE5AE /* ZNBKeyWordSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04205C001EC433E9006AE5AE /* ZNBKeyWordSearch */ = {
+			isa = PBXGroup;
+			children = (
+				04205C041EC433E9006AE5AE /* AppDelegate.h */,
+				04205C051EC433E9006AE5AE /* AppDelegate.m */,
+				04205C071EC433E9006AE5AE /* ViewController.h */,
+				04205C081EC433E9006AE5AE /* ViewController.m */,
+				04205C0A1EC433E9006AE5AE /* Main.storyboard */,
+				04205C0D1EC433E9006AE5AE /* Assets.xcassets */,
+				04205C0F1EC433E9006AE5AE /* LaunchScreen.storyboard */,
+				04205C121EC433E9006AE5AE /* Info.plist */,
+				04205C011EC433E9006AE5AE /* Supporting Files */,
+				04205C181EC43432006AE5AE /* PinYin4Objc */,
+				04205C2D1EC4455D006AE5AE /* ZNBAttributedString.h */,
+				04205C2E1EC4455D006AE5AE /* ZNBAttributedString.m */,
+			);
+			path = ZNBKeyWordSearch;
+			sourceTree = "<group>";
+		};
+		04205C011EC433E9006AE5AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04205C021EC433E9006AE5AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04205C181EC43432006AE5AE /* PinYin4Objc */ = {
+			isa = PBXGroup;
+			children = (
+				04205C191EC43432006AE5AE /* Classes */,
+				04205C251EC43432006AE5AE /* Resources */,
+			);
+			path = PinYin4Objc;
+			sourceTree = "<group>";
+		};
+		04205C191EC43432006AE5AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04205C1A1EC43432006AE5AE /* ChineseToPinyinResource.h */,
+				04205C1B1EC43432006AE5AE /* ChineseToPinyinResource.m */,
+				04205C1C1EC43432006AE5AE /* HanyuPinyinOutputFormat.h */,
+				04205C1D1EC43432006AE5AE /* HanyuPinyinOutputFormat.m */,
+				04205C1E1EC43432006AE5AE /* NSString+PinYin4Cocoa.h */,
+				04205C1F1EC43432006AE5AE /* NSString+PinYin4Cocoa.m */,
+				04205C201EC43432006AE5AE /* PinYin4Objc.h */,
+				04205C211EC43432006AE5AE /* PinyinFormatter.h */,
+				04205C221EC43432006AE5AE /* PinyinFormatter.m */,
+				04205C231EC43432006AE5AE /* PinyinHelper.h */,
+				04205C241EC43432006AE5AE /* PinyinHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04205C251EC43432006AE5AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04205C261EC43432006AE5AE /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04205BFD1EC433E8006AE5AE /* ZNBKeyWordSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04205C151EC433E9006AE5AE /* Build configuration list for PBXNativeTarget "ZNBKeyWordSearch" */;
+			buildPhases = (
+				04205BFA1EC433E8006AE5AE /* Sources */,
+				04205BFB1EC433E8006AE5AE /* Frameworks */,
+				04205BFC1EC433E8006AE5AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZNBKeyWordSearch;
+			productName = ZNBKeyWordSearch;
+			productReference = 04205BFE1EC433E8006AE5AE /* ZNBKeyWordSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04205BF61EC433E8006AE5AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CoderZNBmm;
+				TargetAttributes = {
+					04205BFD1EC433E8006AE5AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B3R5RSW6TE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04205BF91EC433E8006AE5AE /* Build configuration list for PBXProject "ZNBKeyWordSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04205BF51EC433E8006AE5AE;
+			productRefGroup = 04205BFF1EC433E9006AE5AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04205BFD1EC433E8006AE5AE /* ZNBKeyWordSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04205BFC1EC433E8006AE5AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04205C2C1EC43432006AE5AE /* unicode_to_hanyu_pinyin.txt in Resources */,
+				04205C111EC433E9006AE5AE /* LaunchScreen.storyboard in Resources */,
+				04205C0E1EC433E9006AE5AE /* Assets.xcassets in Resources */,
+				04205C0C1EC433E9006AE5AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04205BFA1EC433E8006AE5AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04205C2B1EC43432006AE5AE /* PinyinHelper.m in Sources */,
+				04205C091EC433E9006AE5AE /* ViewController.m in Sources */,
+				04205C281EC43432006AE5AE /* HanyuPinyinOutputFormat.m in Sources */,
+				04205C271EC43432006AE5AE /* ChineseToPinyinResource.m in Sources */,
+				04205C2F1EC4455D006AE5AE /* ZNBAttributedString.m in Sources */,
+				04205C291EC43432006AE5AE /* NSString+PinYin4Cocoa.m in Sources */,
+				04205C2A1EC43432006AE5AE /* PinyinFormatter.m in Sources */,
+				04205C061EC433E9006AE5AE /* AppDelegate.m in Sources */,
+				04205C031EC433E9006AE5AE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04205C0A1EC433E9006AE5AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04205C0B1EC433E9006AE5AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04205C0F1EC433E9006AE5AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04205C101EC433E9006AE5AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04205C131EC433E9006AE5AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04205C141EC433E9006AE5AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04205C161EC433E9006AE5AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				INFOPLIST_FILE = ZNBKeyWordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.search;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04205C171EC433E9006AE5AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				INFOPLIST_FILE = ZNBKeyWordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.search;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04205BF91EC433E8006AE5AE /* Build configuration list for PBXProject "ZNBKeyWordSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04205C131EC433E9006AE5AE /* Debug */,
+				04205C141EC433E9006AE5AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04205C151EC433E9006AE5AE /* Build configuration list for PBXNativeTarget "ZNBKeyWordSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04205C161EC433E9006AE5AE /* Debug */,
+				04205C171EC433E9006AE5AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04205BF61EC433E8006AE5AE /* Project object */;
+}
