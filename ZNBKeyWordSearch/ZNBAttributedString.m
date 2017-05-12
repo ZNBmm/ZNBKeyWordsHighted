@@ -47,48 +47,95 @@ BOOL isJump = NO;
 
     }else { // 拼音
         
-       [allStr enumerateSubstringsInRange:NSMakeRange(0, allStr.length) options:NSStringEnumerationByComposedCharacterSequences  usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
-           NSLog(@"substring--%@--mutableStr--%@",substring,mutableStr);
-           isJump = NO;
-         
-           HanyuPinyinOutputFormat *formatter =  [[HanyuPinyinOutputFormat alloc] init];
-           formatter.caseType = CaseTypeUppercase;
-           formatter.vCharType = VCharTypeWithV;
-           formatter.toneType = ToneTypeWithoutTone;
-           // 讲汉语转成拼音
-           NSString *outputPinyin=[[PinyinHelper toHanyuPinyinStringWithNSString:substring withHanyuPinyinOutputFormat:formatter withNSString:@""] lowercaseString];
-           
-           NSLog(@"outputPinyin--%@",outputPinyin);
-
-           
-           NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",outputPinyin];
-           
-           BOOL isBeginWithSubKey =  [predicate1 evaluateWithObject:keyWords];
-           if ( isBeginWithSubKey) {
-               [mutableAttributedStr addAttribute:NSForegroundColorAttributeName value:color range:substringRange];
-               [mutableAttributedStr addAttribute:NSFontAttributeName value:font range:substringRange];
-               isJump = YES;
-               
-               [mutableArr addObject:substring];
-           }
+        
+        [allStr enumerateSubstringsInRange:NSMakeRange(0, allStr.length) options:NSStringEnumerationByComposedCharacterSequences  usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+            NSLog(@"substring--%@--mutableStr--%@",substring,mutableStr);
+            isJump = NO;
+            
+            HanyuPinyinOutputFormat *formatter =  [[HanyuPinyinOutputFormat alloc] init];
+            formatter.caseType = CaseTypeUppercase;
+            formatter.vCharType = VCharTypeWithV;
+            formatter.toneType = ToneTypeWithoutTone;
+            // 讲汉语转成拼音
+            NSString *outputPinyin=[[PinyinHelper toHanyuPinyinStringWithNSString:substring withHanyuPinyinOutputFormat:formatter withNSString:@""] lowercaseString];
+            
+            NSLog(@"outputPinyin--%@",outputPinyin);
+            
+            
+            NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",outputPinyin];
+            
+            BOOL isBeginWithSubKey =  [predicate1 evaluateWithObject:keyWords];
+            if ( isBeginWithSubKey) {
+                
+                if (outputPinyin.length > 1) {
+                    
+                    [mutableAttributedStr addAttribute:NSForegroundColorAttributeName value:color range:substringRange];
+                    [mutableAttributedStr addAttribute:NSFontAttributeName value:font range:substringRange];
+                }
+                isJump = YES;
+                
+                [mutableArr addObject:substring];
+                NSLog(@"mutableArr--%@",mutableArr);
+                
+                
+            }
+        }];
+        
+        
+        
+        
+        NSMutableString *tempStr = [NSMutableString string];
+        NSUInteger maxLength = 0;
+        
+        for (NSString *string in mutableArr) {
+            
+            [tempStr appendString:string];
+            HanyuPinyinOutputFormat *formatter =  [[HanyuPinyinOutputFormat alloc] init];
+            formatter.caseType = CaseTypeUppercase;
+            formatter.vCharType = VCharTypeWithV;
+            formatter.toneType = ToneTypeWithoutTone;
+            
+            NSString *outputPinyin=[[PinyinHelper toHanyuPinyinStringWithNSString:string withHanyuPinyinOutputFormat:formatter withNSString:@""] lowercaseString];
+            maxLength = outputPinyin.length > maxLength ? outputPinyin.length : maxLength;
+            
+        }
+        
+        [tempStr enumerateSubstringsInRange:NSMakeRange(0, tempStr.length) options:NSStringEnumerationByWords usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+            NSLog(@"tempStr- substring %@",substring);
+            HanyuPinyinOutputFormat *formatter =  [[HanyuPinyinOutputFormat alloc] init];
+            formatter.caseType = CaseTypeUppercase;
+            formatter.vCharType = VCharTypeWithV;
+            formatter.toneType = ToneTypeWithoutTone;
+            
+            NSString *outputPinyin=[[PinyinHelper toHanyuPinyinStringWithNSString:substring withHanyuPinyinOutputFormat:formatter withNSString:@""] lowercaseString];
+            if ([outputPinyin isEqualToString:keyWords]) {
+                *stop = YES;
+                [mutableAttributedStr removeAttribute:NSForegroundColorAttributeName range:NSMakeRange(0, allStr.length)];
+                [mutableAttributedStr removeAttribute:NSFontAttributeName range:NSMakeRange(0, allStr.length)];
+                NSRange range = [allStr rangeOfString:substring];
+                NSLog(@"%@",NSStringFromRange(range));
+                [mutableAttributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+                [mutableAttributedStr addAttribute:NSFontAttributeName value:font range:range];
+            }
+            NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",outputPinyin];
+            
+            BOOL isBeginWithSubKey =  [predicate1 evaluateWithObject:keyWords];
+            if ( isBeginWithSubKey) {
+                NSRange range = [allStr rangeOfString:substring];
+                NSLog(@"%@",NSStringFromRange(range));
+                [mutableAttributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+                [mutableAttributedStr addAttribute:NSFontAttributeName value:font range:range];
+            }
+            
           
-           NSLog(@"mutableArr--%@",mutableArr);
-           NSString *tempStr;
-           NSUInteger maxLength = 0;
-           for (NSString *string in mutableArr) {
-
-               HanyuPinyinOutputFormat *formatter =  [[HanyuPinyinOutputFormat alloc] init];
-               formatter.caseType = CaseTypeUppercase;
-               formatter.vCharType = VCharTypeWithV;
-               formatter.toneType = ToneTypeWithoutTone;
-
-               NSString *outputPinyin=[[PinyinHelper toHanyuPinyinStringWithNSString:string withHanyuPinyinOutputFormat:formatter withNSString:@""] lowercaseString];
-               maxLength = outputPinyin.length > maxLength ? outputPinyin.length : maxLength;
-               
-               tempStr = outputPinyin;
-           }
-           
-       }];
+            
+            else {
+                NSRange range = [allStr rangeOfString:substring];
+                [mutableAttributedStr removeAttribute:NSForegroundColorAttributeName range:range];
+                [mutableAttributedStr removeAttribute:NSFontAttributeName range:range];
+            }
+        }];
+        
     }
     
     

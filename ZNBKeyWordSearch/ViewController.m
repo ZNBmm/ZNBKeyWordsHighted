@@ -35,8 +35,10 @@
 - (void)textFDidChange:(NSNotification *)notice {
 
     NSLog(@"%@",self.textF.text);
-
-    self.label.attributedText = [ZNBAttributedString setAllText:self.label.attributedText.string andKeyWords:self.textF.text withKeyWordsColor:[UIColor redColor] KeyWordsFont:[UIFont fontWithName:@"Arial-BoldMT" size:22]];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+       
+        self.label.attributedText = [ZNBAttributedString setAllText:self.label.attributedText.string andKeyWords:self.textF.text withKeyWordsColor:[UIColor redColor] KeyWordsFont:[UIFont fontWithName:@"Arial-BoldMT" size:22]];
+    }];
 }
 
 @end
